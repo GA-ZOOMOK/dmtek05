@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 @Controller
 public class HelloController {
 
-    //  /hello 가들어오면 해당 메서드 실행
+    //'/hello' 가들어오면 해당 메서드 실행
     @GetMapping("hello")
     public String hello(Model model){
         model.addAttribute("data", "hello!!");
