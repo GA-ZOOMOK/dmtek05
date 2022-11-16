@@ -10,11 +10,9 @@ import java.util.List;
 import java.util.Optional;
 
 //service는 비즈니스에 의존적 설계, repository는 기계적으로 작동하게 만듬
-
 public class MemberService {
 
     private final MemberRepository memberRepository;
-
 
     public MemberService(MemberRepository memberRepository) {
         this.memberRepository = memberRepository;
