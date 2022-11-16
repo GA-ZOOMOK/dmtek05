@@ -1,8 +1,10 @@
 package com.hunmo.examplespring.repository;
 
 import com.hunmo.examplespring.domain.Member;
+import org.springframework.stereotype.Repository;
 
 import java.util.*;
+
 
 public class MemoryMemberRepository implements MemberRepository{
 
