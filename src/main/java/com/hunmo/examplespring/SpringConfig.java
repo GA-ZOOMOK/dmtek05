@@ -1,5 +1,6 @@
 package com.hunmo.examplespring;
 
+import com.hunmo.examplespring.aop.TimeTraceAop;
 import com.hunmo.examplespring.repository.MemberRepository;
 import com.hunmo.examplespring.repository.MemoryMemberRepository;
 import com.hunmo.examplespring.repository.jdbcTemplateMemberRepository;
@@ -19,6 +20,9 @@ public class SpringConfig {
     public SpringConfig(DataSource dataSource){
         this.dataSource = dataSource;
     }
+
+    @Bean
+    public TimeTraceAop timeTraceAop() { return new TimeTraceAop();}
 
     @Bean
     public MemberService memberService(){
