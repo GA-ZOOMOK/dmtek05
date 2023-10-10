@@ -23,6 +23,7 @@ public class jdbcTemplateMemberRepository implements MemberRepository {
         jdbcTemplate = new JdbcTemplate(dataSource);
     }
 
+
     @Override
     public Member save(Member member) {
         SimpleJdbcInsert jdbcInsert = new SimpleJdbcInsert(jdbcTemplate);
@@ -63,6 +64,5 @@ public class jdbcTemplateMemberRepository implements MemberRepository {
                 return member;
             }
         };
-
     }
 }
